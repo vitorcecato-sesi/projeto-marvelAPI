@@ -1,0 +1,42 @@
+/* Container principal do card */
+.info-blocao {
+  display: flex; /* Coloca a imagem e o texto lado a lado */
+  align-items: center; /* Alinha verticalmente no centro */
+  border-radius: 16px; /* Bordas arredondadas */
+  padding: 2rem; /* Espaçamento interno */
+  max-width: 95rem; /* Largura máxima do card */
+  margin: 2rem auto; /* Centraliza horizontalmente na tela */
+}
+
+/* Estilo do bloco da imagem */
+.info-bloco-img img {
+  width: 24rem; /* Largura fixa da imagem */
+  height: auto; /* Altura automática (mantém proporção) */
+  border-radius: 12px; /* Cantos arredondados da imagem */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra leve na imagem */
+}
+
+/* Espaço e organização do bloco de texto */
+.info-bloco-texto {
+  margin-left: 8rem; /* Espaço entre a imagem e o texto */
+  max-width: 250rem; /* Limita largura do texto */
+}
+
+/* Título dentro do card */
+.info-bloco-texto h1 {
+  font-size: 24px; /* Tamanho da fonte do título */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Parágrafo dentro do card */
+.info-bloco-texto p {
+  font-size: 16px; /* Tamanho da fonte do parágrafo */
+  color: #333; /* Cor do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+.info-blocao:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+  transform: translateY(-2px); /* Leve elevação do card ao passar o mouse */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e elevação */
+}
