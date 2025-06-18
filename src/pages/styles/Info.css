@@ -3,13 +3,12 @@
   padding: 0;
 }
 
-
 body, html {
   height: 100%;
 }
 
 .info-detalhes-container {
-  padding: 8rem;
+  padding: 6rem;
   display: flex;
   flex-direction: row;
   gap: 14rem;
@@ -61,7 +60,7 @@ body, html {
   box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   max-width: 55rem;
-  background-color: #2e27fea0;
+  background-color: #2e27fecf;
 }
 
 .info-hq-card h2 {
