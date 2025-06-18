@@ -2,17 +2,18 @@ import { useState } from "react"
 import ListaAPI from "../components/ListaAPI"
 
 import Header from "../components/Header"
+import ListaPersonagens from "../components/buscaHome"
 
 function Home() {
     const [aperta, setAperta] = useState(true)
     return(
         <>
-            <button onClick={() => setAperta(!aperta)}>APERTA</button>
-            {aperta && 
-            <section style={{display: "flex", flexDirection:"column", alignItems: "center"}}>
-                <ListaAPI />
-            </section>
-            }
+
+            <Header />
+            <ListaPersonagens/>
+
+            
+
         </>
     )
 }

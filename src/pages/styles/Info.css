@@ -1,0 +1,135 @@
+/* Remove margens e preenchimentos padrões de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Garante que o body e html ocupem toda a altura da janela */
+body, html {
+  height: 100%;
+}
+
+/* Container dos detalhes do herói */
+.info-detalhes-container {
+  padding: 6rem;               /* Espaçamento interno grande */
+  display: flex;               /* Organiza os filhos lado a lado */
+  flex-direction: row;         /* Direção da flex: horizontal */
+  gap: 14rem;                  /* Espaço entre os elementos filhos */
+}
+
+/* CARD 1 - Informações do Herói */
+.info-detalhes-card {
+  display: flex;                             /* Layout flexível */
+  background-color: #fff;                    /* Cor de fundo (será sobrescrita) */
+  border-radius: 16px;                       /* Bordas arredondadas */
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);  /* Sombra para profundidade */
+  overflow: hidden;                          /* Oculta conteúdo que transborda */
+  max-width: 53rem;                          /* Largura máxima */
+  background-color: #2e27fecf;               /* Cor de fundo azul com transparência */
+}
+
+/* Container da imagem do herói */
+.info-detalhes-img {
+  flex: 1;              /* Ocupa 1 parte do espaço total */
+  min-width: 200px;     /* Largura mínima */
+}
+
+/* Estiliza a imagem */
+.info-detalhes-img img {
+  width: 100%;          /* Ocupa toda a largura do container */
+  height: 100%;         /* Ocupa toda a altura */
+  object-fit: cover;    /* Preenche o espaço mantendo a proporção e cortando excesso */
+}
+
+/* Container do texto do herói */
+.info-detalhes-texto {
+  flex: 2;              /* Ocupa 2 partes do espaço total */
+  padding: 1.5rem;      /* Espaçamento interno */
+}
+
+/* Nome do herói */
+.info-detalhes-texto h1 {
+  margin-bottom: 1rem;  /* Espaço abaixo do título */
+  font-size: 2rem;      /* Tamanho grande para destaque */
+}
+
+/* Descrição do herói */
+.info-detalhes-texto p {
+  font-size: 1.3rem;    /* Tamanho de fonte aumentado */
+  line-height: 1.6;     /* Espaçamento entre linhas */
+}
+
+/* CARD 2 - Lista de HQs */
+.info-hq-card {
+  background-color: #fff;                    /* Cor de fundo (será sobrescrita) */
+  border-radius: 16px;                       /* Bordas arredondadas */
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);  /* Sombra */
+  padding: 1.5rem;                           /* Espaço interno */
+  max-width: 55rem;                          /* Largura máxima */
+  background-color: #2e27fecf;               /* Azul transparente sobrepõe o branco */
+}
+
+/* Título da seção de HQs */
+.info-hq-card h2 {
+  margin-bottom: 1rem;  /* Espaço abaixo do título */
+}
+
+/* Lista de HQs */
+.info-hq-card ul {
+  list-style: disc;         /* Marcadores em forma de bolinha */
+  padding-left: 1.5rem;     /* Espaço à esquerda da lista */
+}
+
+/* Cada item da lista */
+.info-hq-card li {
+  margin-bottom: 0.5rem;  /* Espaço entre os itens */
+  font-size: 1rem;        /* Tamanho da fonte padrão */
+}
+
+/* Animação de rotação para o spinner */
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);   /* Começa sem rotação */
+  }
+  100% {
+    transform: rotate(360deg); /* Termina com uma rotação completa */
+  }
+}
+
+/* Container de carregamento */
+.info-carregando-container {
+  display: flex;                /* Layout flexível */
+  flex-direction: column;       /* Organiza itens em coluna */
+  align-items: center;          /* Centraliza na horizontal */
+  justify-content: center;      /* Centraliza na vertical */
+  height: 60vh;                 /* Ocupa 60% da altura da janela */
+  color: #333;                  /* Cor do texto */
+  font-weight: bold;           /* Texto em negrito */
+}
+
+/* Spinner de carregamento */
+.info-spinner {
+  border: 8px solid #f3f3f3;     /* Borda cinza clara */
+  border-top: 8px solid #e62429; /* Borda superior vermelha */
+  border-radius: 50%;            /* Forma de círculo */
+  width: 60px;                   /* Tamanho do spinner */
+  height: 60px;
+  animation: girar 1s linear infinite; /* Animação contínua */
+  margin-bottom: 1rem;           /* Espaço abaixo do spinner */
+}
+
+/* Efeito de fundo parallax */
+.info-parallax {
+  background-image: url("https://pop.proddigital.com.br/wp-content/uploads/sites/8/2021/09/principais-personagens.jpg"); /* Imagem de fundo */
+  background-attachment: fixed;    /* Faz o efeito de paralax fixando o fundo */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Não repete a imagem */
+  background-size: cover;          /* Cobre todo o fundo */
+  min-height: 90vh;                /* Ocupa 90% da altura da janela */
+  width: 100%;                     /* Ocupa toda a largura */
+}
+
+/* Estilo do botão de tema */
+.info-bo {
+  margin-left: 95rem; /* Posiciona o botão muito à direita (pode ser exagerado e causar scroll horizontal) */
+}
