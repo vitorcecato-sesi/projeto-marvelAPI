@@ -72,7 +72,7 @@ function ListaPersonagens() {
                     {personagens.length === 0 ? (
                         <p>Nenhum personagem encontrado.</p>
                     ) : (
-                        <section className="BuscaAPI-BoxCards">
+                        <>
                             {personagens.map((personagem) => (
                                 <section className="BuscaAPI-Cards" key={personagem.id}>
                                     <img className="BuscaAPI-Img" src={`${personagem.thumbnail.path}.${personagem.thumbnail.extension}`} alt={personagem.name} />
@@ -80,7 +80,7 @@ function ListaPersonagens() {
                                     <p>{fraseEfeito[personagem.name] || `${personagem.name} em ação! 🐱‍🏍`}</p>
                                 </section>
                             ))}
-                        </section>
+                        </>
                     )}
                 </section>
             )}
