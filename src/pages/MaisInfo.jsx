@@ -10,11 +10,14 @@ import axios from "axios";
 // Importa o md5 para gerar o hash exigido pela API da Marvel
 import md5 from "md5";
 
-// Importa o componente de cabeçalho
+// Importa o  cabeçalho
 import Header from "../components/Header";
 
 // Importa o botão de troca de tema
 import BotaoTema from "../components/BotaoTema";
+
+//Import o footer
+import Footer from "../components/Footer";
 
 // Importa o arquivo de estilos CSS da página
 import "./styles/Info.css";
@@ -49,12 +52,13 @@ function MaisInfo() {
 
     // Função assíncrona que busca os dados da API
     async function buscarDados() {
-      try {
+      try { // Tente executar este código
         // Faz requisição para buscar os dados do personagem pelo ID
         const resPersonagem = await axios.get(
           `https://gateway.marvel.com/v1/public/characters/${id}`,
           { params: { ts, apikey: publicKey, hash } }
         );
+
 
         // Salva o herói retornado no estado
         setHeroi(resPersonagem.data.data.results[0]);
@@ -67,7 +71,7 @@ function MaisInfo() {
 
         // Salva as HQs no estado
         setHqs(resHQs.data.data.results);
-      } catch (error) {
+      } catch (error) {   // Se der erro, execute isso aqui
         // Mostra erro no console se a requisição falhar
         console.error("Erro ao buscar dados:", error);
       } finally {
@@ -159,6 +163,8 @@ function MaisInfo() {
           )}
         </section>
       </section>
+      <Footer />
+      
     </>
   );
 }

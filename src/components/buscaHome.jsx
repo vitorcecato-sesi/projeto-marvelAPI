@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './styles/buscaHome.css';
 import md5 from "blueimp-md5";
+import { Link } from "react-router-dom";
 
 // Chaves da API da Marvel (⚠️ Evite expor a chave privada em produção)
 const CHAVE_PUBLICA = "5323f4be36461aa651d45a2c6c8035b0";
@@ -135,7 +136,7 @@ function BuscaHome() {
                             <p>Nenhum personagem encontrado.</p>
                         ) : (
                             personagens.map((personagem) => (
-                                <section className="BuscaAPI-Cards" key={personagem.id}>
+                                <Link to={`/detalhes/${personagem.id}`} className="BuscaAPI-Cards" key={personagem.id}>
                                     <img
                                         className="BuscaAPI-Img"
                                         src={`${personagem.thumbnail.path}.${personagem.thumbnail.extension}`}
@@ -156,7 +157,7 @@ function BuscaHome() {
                                     <p>
                                         {personagem.description || "Sem descrição disponível."}
                                     </p>
-                                </section>
+                                </Link>
                             ))
                         )}
                     </>
