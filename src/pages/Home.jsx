@@ -1,18 +1,16 @@
 import { useState } from "react"
 import ListaAPI from "../components/ListaAPI"
-
 import Header from "../components/Header"
-import ListaPersonagens from "../components/buscaHome"
+import BuscaHome from "../components/buscaHome"
+import Footer from "../components/Footer"
 
 function Home() {
-    const [aperta, setAperta] = useState(true)
     return(
         <>
-
             <Header />
-            <ListaPersonagens/>
-
-            
+            <BuscaHome/>
+            <ListaAPI/>
+            <Footer/>
 
         </>
     )

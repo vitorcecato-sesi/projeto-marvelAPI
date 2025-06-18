@@ -7,7 +7,7 @@ import md5 from "blueimp-md5";
 const CHAVE_PUBLICA = "5323f4be36461aa651d45a2c6c8035b0";
 const CHAVE_PRIVADA = "dfc57c3ddfff308bbadcb36ec69b084480d73c2b";
 
-function ListaPersonagens() {
+function BuscaHome() {
     const [personagens, setPersonagens] = useState([]);
     const [carregando, setCarregando] = useState(false);
     const [busca, setBusca] = useState("");
@@ -88,4 +88,4 @@ function ListaPersonagens() {
     );
 }
 
-export default ListaPersonagens;
+export default BuscaHome;
