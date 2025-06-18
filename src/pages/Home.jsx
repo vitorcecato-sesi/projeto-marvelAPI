@@ -21,6 +21,9 @@ function Home() {
                     <br/>
                     <TrocaDeCor/>
                     <br />
+                    <br />
+                    <h1>Primeiros 20 Personagens da API</h1>
+                    <br />
                     <button className="Home-Botao" onClick={() => setMostrar(!mostrar)}>{mostrar ? "Ocultar" : "Mostrar"}</button>
                     <br />
                     <br />
