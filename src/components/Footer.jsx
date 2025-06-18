@@ -19,7 +19,7 @@ function Footer() {
             <section className="blocoLinksPaginas"> 
                 <strong> <Link to="/"> HOME </Link> </strong> {/* strong -> negrito */}
                 <strong> <Link to="/"> FAVORITOS </Link> </strong> 
-                <strong> <Link to="/SobreNos"> SOBRE O APP </Link>  </strong>
+                <strong> <Link to="/SobreApp"> SOBRE O APP </Link>  </strong>
             </section>
 
             <section className="blocoLinksPaginas"> 
