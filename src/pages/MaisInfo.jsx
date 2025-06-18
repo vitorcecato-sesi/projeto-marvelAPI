@@ -13,9 +13,6 @@ import md5 from "md5";
 // Importa o  cabeçalho
 import Header from "../components/Header";
 
-// Importa o botão de troca de tema
-import BotaoTema from "../components/BotaoTema";
-
 //Import o footer
 import Footer from "../components/Footer";
 
@@ -105,11 +102,6 @@ function MaisInfo() {
 
       {/* Seção com efeito parallax no CSS */}
       <section className="info-parallax">
-        
-        {/* Botão para trocar o tema (claro/escuro) */}
-        <section className="info-bo">
-          <BotaoTema />
-        </section>
 
         {/* Container com os detalhes do herói */}
         <section className="info-detalhes-container">
