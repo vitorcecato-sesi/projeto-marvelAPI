@@ -8,7 +8,7 @@
 
 // Páginas
   import Home from './pages/Home'
-  import SobreNos from './pages/SobreNos'
+  import SobreApp from './pages/SobreApp'
 //.
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/SobreApp' element={<SobreNos />} />
+          <Route path='/SobreApp' element={<SobreApp />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 //CSS
-import "../pages/styles/SobreNos.css";
+import "../pages/styles/SobreApp.css";
 
 function SobreNos() {
   return (

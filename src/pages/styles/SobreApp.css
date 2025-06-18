@@ -14,7 +14,7 @@
     height: 60vh;
     border-radius: 3em;
     padding: 1em;
-    background-color: #fdffcd;
+    background-color: #CCD59A;
     transition: all 1s ease;
     box-shadow: 0px 0px 20px rgb(168, 168, 168);
 }
@@ -26,7 +26,7 @@
 }
 
 .tituloGrupo{
-    background-color: #CCD59A;
+    background-color: #979F67;
     width: 15vw;
     border-radius: 3em;
 }
