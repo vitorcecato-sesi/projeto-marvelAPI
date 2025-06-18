@@ -1,29 +1,16 @@
-// Hooks
-  import { BrowserRouter, Route, Routes } from 'react-router-dom'
-//.
-
-// Estilos
-  import './App.css'
-  import Favoritos from './pages/ListaDefavoritos'
-//.
-
-// Páginas
-  import MaisInfo from './pages/MaisInfo'
-  import Home from './pages/Home'
-//.
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ListaPersonagens from "./components/buscaHome";
+import MaisInfo from "./pages/MaisInfo";
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Detalhes' element={<MaisInfo />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<ListaPersonagens />} />
+        <Route path="/detalhes/:id" element={<MaisInfo />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

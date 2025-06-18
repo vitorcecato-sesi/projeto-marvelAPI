@@ -1,50 +1,128 @@
-/* Container principal do card */
-.info-blocao {
-  display: flex; /* Coloca a imagem e o texto lado a lado */
-  align-items: center; /* Alinha verticalmente no centro */
-  border-radius: 16px; /* Bordas arredondadas */
-  padding: 2rem; /* Espaçamento interno */
-  max-width: 95rem; /* Largura máxima do card */
-  margin: 2rem auto; /* Centraliza horizontalmente na tela */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra do card */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilo do bloco da imagem */
-.info-bloco-img img {
-  width: 24rem; /* Largura fixa da imagem */
-  height: auto; /* Altura automática (mantém proporção) */
-  border-radius: 12px; /* Cantos arredondados da imagem */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra leve na imagem */
+
+body, html {
+  height: 100%;
 }
 
-/* Espaço e organização do bloco de texto */
-.info-bloco-texto {
-  margin-left: 8rem; /* Espaço entre a imagem e o texto */
-  max-width: 250rem; /* Limita largura do texto */
+.info-detalhes-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 14rem;
+
 }
 
-/* Título dentro do card */
-.info-bloco-texto h1 {
-  font-size: 24px; /* Tamanho da fonte do título */
-  color: black;
-  margin-bottom: 10px; /* Espaço abaixo do título */
+/* CARD 1 */
+.info-detalhes-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 53rem;
+  background-color: #00000097;
+  
 }
 
-/* Parágrafo dentro do card */
-.info-bloco-texto p {
-  font-size: 16px; /* Tamanho da fonte do parágrafo */
-  color: #000000; /* Cor do texto */
-  line-height: 1.5; /* Espaçamento entre linhas */
+.info-detalhes-img {
+  flex: 1;
+  min-width: 200px;
 }
 
-.info-blocao:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
-  transform: translateY(-2px); /* Leve elevação do card ao passar o mouse */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e elevação */
+.info-detalhes-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.info-detalhes-texto {
+  flex: 2;
+  padding: 1.5rem;
+}
+
+.info-detalhes-texto h1 {
+  margin-bottom: 1rem;
+   color: #e62429;
+  font-size: 2rem;
+}
+
+.info-detalhes-texto p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* CARD 2 */
+.info-hq-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 55rem;
+  background-color: #00000097;
+}
+
+.info-hq-card h2 {
+  margin-bottom: 1rem;
+  color: #e62429;
+
+}
+
+.info-hq-card ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.info-hq-card li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info-carregando-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: #333;
+  font-weight: bold;
+}
+
+.info-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #e62429;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: girar 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.info-parallax {
+  background-image: url("https://www.komar.de/media/cms/fileadmin/user_upload/Category/Fototapeten/Marvel/komar-fototapeten-marvel.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
 
 
 .info-bo{
-  margin-top: 1rem; /* Espaço acima do bloco de texto */
-  margin-left: 97rem; /* Espaço à esquerda do bloco de texto */
+  margin-left: 95rem;
 }

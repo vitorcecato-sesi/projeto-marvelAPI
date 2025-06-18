@@ -11,73 +11,95 @@ function MaisInfo() {
   const { id } = useParams();
   const [heroi, setHeroi] = useState(null);
   const [hqs, setHqs] = useState([]);
+  const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
     const publicKey = "5323f4be36461aa651d45a2c6c8035b0";
     const privateKey = "dfc57c3ddfff308bbadcb36ec69b084480d73c2b";
-    const ts = Date.now();
+    const ts = Date.now().toString();
     const hash = md5(ts + privateKey + publicKey);
 
-    // Busca informações do personagem
-    axios
-      .get(`https://gateway.marvel.com/v1/public/characters/${id}`, {
-        params: { ts, apikey: publicKey, hash },
-      })
-      .then((res) => {
-        const personagem = res.data.data.results[0];
-        setHeroi(personagem);
-      })
-      .catch((err) => console.error("Erro ao buscar herói:", err));
+    async function buscarDados() {
+      try {
+        const resPersonagem = await axios.get(
+          `https://gateway.marvel.com/v1/public/characters/${id}`,
+          { params: { ts, apikey: publicKey, hash } }
+        );
+        setHeroi(resPersonagem.data.data.results[0]);
 
-    // Busca HQs do personagem
-    axios
-      .get(`https://gateway.marvel.com/v1/public/characters/${id}/comics`, {
-        params: { ts, apikey: publicKey, hash, limit: 10 },
-      })
-      .then((res) => {
-        setHqs(res.data.data.results);
-      })
-      .catch((err) => console.error("Erro ao buscar HQs:", err));
+        const resHQs = await axios.get(
+          `https://gateway.marvel.com/v1/public/characters/${id}/comics`,
+          { params: { ts, apikey: publicKey, hash, limit: 10 } }
+        );
+        setHqs(resHQs.data.data.results);
+      } catch (error) {
+        console.error("Erro ao buscar dados:", error);
+      } finally {
+        setCarregando(false);
+      }
+    }
+
+    buscarDados();
   }, [id]);
 
+  if (carregando) {
+    return (
+      <div className="info-carregando-container">
+        <div className="info-spinner"></div>
+        <p>Carregando informações do herói...</p>
+      </div>
+    );
+  }
+
   return (
-    <>
-      <Header />
-      <section className="info-bo">
-      <BotaoTema />
-      </section>
+  <>
+    <Header />
+<section className="info-parallax">
+     <section className="info-bo">
+        <BotaoTema/>
+    </section>
+   <section className="info-detalhes-container">
+      {heroi ? (
+        <>
+          {/* CARD 1: imagem + texto */}
+          <div className="info-detalhes-card">
+            <div className="info-detalhes-img">
+              {heroi.thumbnail && (
+                <img
+                  src={`${heroi.thumbnail.path}.${heroi.thumbnail.extension}`}
+                  alt={heroi.name}
+                />
+              )}
+            </div>
+            <div className="info-detalhes-texto">
+              <h1>{heroi.name}</h1>
+              <p>{heroi.description || "Sem descrição disponível."}</p>
+            </div>
+          </div>
 
-      <section className="info-blocao">
-        {heroi ? (
-          <>
-            <section className="info-bloco-texto">
-              <h1>HQ</h1>
-              <p>Veja abaixo as histórias em quadrinhos em que {heroi.name} aparece:</p>
-              <ul>
-                {hqs.length > 0 ? (
-                  hqs.map((comic) => (
-                    <li key={comic.id}>
-                      <strong>{comic.title}</strong>
-                    </li>
-                  ))
-                ) : (
-                  <li>Sem HQs disponíveis.</li>
-                )}
-              </ul>
-            </section>
-            <section className="info-bloco-img">
-              <img
-                src={`${heroi.thumbnail.path}.${heroi.thumbnail.extension}`}
-                alt={heroi.name}
-              />
-            </section>
-          </>
-        ) : (
-          <p>Carregando informações...</p>
-        )}
-      </section>
-    </>
-  );
-}
+          {/* CARD 2: HQs */}
+          <div className="info-hq-card">
+            <h2>HQs em que aparece:</h2>
+            <ul>
+              {hqs.length > 0 ? (
+                hqs.map((comic) => (
+                  <li key={comic.id}>
+                    <strong>{comic.title}</strong>
+                  </li>
+                ))
+              ) : (
+                <li>Sem HQs disponíveis.</li>
+              )}
+            </ul>
+          </div>
+        </>
+      ) : (
+        <p>Herói não encontrado.</p>
+      )}
+    </section>
+</section>
 
+   
+  </>
+);}
 export default MaisInfo;
