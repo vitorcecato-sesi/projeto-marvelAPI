@@ -5,17 +5,44 @@
 
 .HeaderPrincipal {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Espaço entre os itens */
     align-items: center;
     height: 7vh;
     background-color: #000000e1;
     border-bottom: solid rgb(61, 61, 61) 0.5px;
+    position: relative;
+    padding: 0 2vw;
 }
 
 .HeaderPrincipal img {
-    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     height: 7vh;
+    width: auto;
     display: block;
+    z-index: 1;
+    top: 0px; /* Ajusta a imagem para ela ficar no topo da tela */
+}
+
+.HeaderPrincipal i {
+    z-index: 2;
+    margin-left: 10vw; /* afasta o ícone da borda esquerda */
+    color: white;
+    font-size: 1.7em;
+    transition: all 1s ease;
+}
+
+.HeaderPrincipal i:hover {
+    transform: scale(1.1);
+    color: red;
+}
+
+.HeaderPrincipal h3 {
+    z-index: 2;
+    margin-right: 10vw; /* afasta o texto da borda direita */
+    color: #888;
+    font-style: italic;
 }
 
 .Navbar {
