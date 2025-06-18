@@ -9,9 +9,10 @@
 
 // Páginas
   import Home from './pages/Home'
-  import SobreNos from './pages/SobreNos'
 import ListaPersonagens from "./components/buscaHome";
 import MaisInfo from "./pages/MaisInfo";
+  import SobreApp from './pages/SobreApp'
+//.
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/SobreApp' element={<SobreApp />} />
         </Routes>
       </BrowserRouter>
     </>

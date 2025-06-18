@@ -5,6 +5,7 @@
     gap: 2em;
 }
 
+/* Bloco onde está a foto do grupo */
 .blocoFotoGrupo3{
     display: flex;
     flex-direction: column;
@@ -14,7 +15,7 @@
     height: 60vh;
     border-radius: 3em;
     padding: 1em;
-    background-color: #fdffcd;
+    background-color: #CCD59A;
     transition: all 1s ease;
     box-shadow: 0px 0px 20px rgb(168, 168, 168);
 }
@@ -26,7 +27,7 @@
 }
 
 .tituloGrupo{
-    background-color: #CCD59A;
+    background-color: #979F67;
     width: 15vw;
     border-radius: 3em;
 }
@@ -36,6 +37,7 @@
     border-radius: 3em;
 }
 
+/* Espaço onde está a logo e os integrantes */
 .BlocoLogoEIntegrantes{
     display: flex;
     flex-direction: row;
@@ -43,10 +45,15 @@
     gap: 5em;
 }
 
+.BlocoLogoEIntegrantes h3 {
+    color: black
+}
+
 .logoSobreGrupo{
     width: 25vw;
 }
 
+/*Bloco Sobre o Projeto*/
 .blocoSobreProjeto{
     width: 50vw;
     background-color: #CCD59A;
@@ -67,4 +74,49 @@
     background-color: #979F67;
     width: 15vw;
     border-radius: 3em;
+}
+
+@media (max-width: 600px) {
+    .blocoFotoGrupo3{
+        width: 70vw;
+        height: 40vh;
+    }
+    .tituloGrupo{
+        width: 40vw;
+    }
+    .fotoDoGrupo{
+        width: 40vw;
+    }
+    .blocoSobreProjeto{
+        width: 70vw;
+    }
+    .tituloSobreProjeto{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .blocoFotoGrupo3{
+        height: 45vh;
+    }
+    .tituloSobreProjeto{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 660px) {
+    .tituloGrupo{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .BlocoLogoEIntegrantes{
+        display: flex;
+        flex-direction: column;
+        gap: 1em
+    }
+    .blocoFotoGrupo3{
+        height: 50vw;
+    }
 }
