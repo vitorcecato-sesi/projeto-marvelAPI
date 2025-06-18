@@ -54,7 +54,7 @@ function MaisInfo() {
   return (
   <>
     <Header />
-<section className="info-parallax">
+      <section className="info-parallax">
      <section className="info-bo">
         <BotaoTema/>
     </section>

@@ -9,7 +9,7 @@ body, html {
 }
 
 .info-detalhes-container {
-  padding: 2rem;
+  padding: 8rem;
   display: flex;
   flex-direction: row;
   gap: 14rem;
@@ -24,7 +24,7 @@ body, html {
   box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 53rem;
-  background-color: #00000097;
+  background-color:  #2e27fecf;
   
 }
 
@@ -46,7 +46,6 @@ body, html {
 
 .info-detalhes-texto h1 {
   margin-bottom: 1rem;
-   color: #e62429;
   font-size: 2rem;
 }
 
@@ -62,13 +61,11 @@ body, html {
   box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   max-width: 55rem;
-  background-color: #00000097;
+  background-color: #2e27fea0;
 }
 
 .info-hq-card h2 {
   margin-bottom: 1rem;
-  color: #e62429;
-
 }
 
 .info-hq-card ul {
@@ -112,12 +109,12 @@ body, html {
 }
 
 .info-parallax {
-  background-image: url("https://www.komar.de/media/cms/fileadmin/user_upload/Category/Fototapeten/Marvel/komar-fototapeten-marvel.jpg");
+  background-image: url("https://pop.proddigital.com.br/wp-content/uploads/sites/8/2021/09/principais-personagens.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
 }
 
