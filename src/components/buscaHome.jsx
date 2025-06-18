@@ -61,7 +61,7 @@ function BuscaHome() {
         async function buscarPorDescricao() {
             setCarregando(true);
             const ts = Date.now().toString();
-            const hash = md5(ts + CHAVE_PRIVADA + CHAVE_PUBLICA);
+            const hash = md5(ts + CHAVE_PRIVADA + CHAVE_PUBLICA); // Requisição necessaria
             const url = `https://gateway.marvel.com/v1/public/characters?limit=100&ts=${ts}&apikey=${CHAVE_PUBLICA}&hash=${hash}`;
 
             try {
