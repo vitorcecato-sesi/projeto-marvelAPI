@@ -1,4 +1,3 @@
-
 // Importa o hook useParams do React Router para pegar o ID da URL
 import { useParams } from "react-router-dom";
 
@@ -53,12 +52,13 @@ function MaisInfo() {
 
     // Função assíncrona que busca os dados da API
     async function buscarDados() {
-      try {
+      try { // Tente executar este código
         // Faz requisição para buscar os dados do personagem pelo ID
         const resPersonagem = await axios.get(
           `https://gateway.marvel.com/v1/public/characters/${id}`,
           { params: { ts, apikey: publicKey, hash } }
         );
+
 
         // Salva o herói retornado no estado
         setHeroi(resPersonagem.data.data.results[0]);
@@ -71,7 +71,7 @@ function MaisInfo() {
 
         // Salva as HQs no estado
         setHqs(resHQs.data.data.results);
-      } catch (error) {
+      } catch (error) {   // Se der erro, execute isso aqui
         // Mostra erro no console se a requisição falhar
         console.error("Erro ao buscar dados:", error);
       } finally {
