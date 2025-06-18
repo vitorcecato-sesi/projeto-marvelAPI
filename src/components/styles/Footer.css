@@ -38,4 +38,10 @@
     gap: 10em;
     text-decoration: none;
     padding: 1em;
+    transition: all 1s ease; /* Transição suave */
+}
+
+.iconesRedesSociais a:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
+    color: red;
 }
