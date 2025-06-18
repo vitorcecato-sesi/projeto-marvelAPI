@@ -94,7 +94,6 @@ function BuscaHome() {
         }
 
         setBusca(buscaInput);  // Define a busca final
-        setBuscaInput("");     // Limpa o campo de input
         setErro(false);        // Oculta erro, se estava ativo
     };
 

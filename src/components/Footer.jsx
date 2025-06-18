@@ -17,7 +17,7 @@ function Footer() {
             <Link to="https://developer.marvel.com/"> <img className="LogoFooterMarvel" src={LogoFooterM} alt="Logo da Marvel" /> </Link>
 
             <section className="blocoLinksPaginas"> 
-                <strong> <Link to="/Home"> HOME </Link> </strong> {/* strong -> negrito */}
+                <strong> <Link to="/"> HOME </Link> </strong> {/* strong -> negrito */}
                 <strong> <Link to="/Favoritos"> FAVORITOS </Link> </strong> 
                 <strong> <Link to="/SobreApp"> SOBRE O APP </Link>  </strong>
             </section>
