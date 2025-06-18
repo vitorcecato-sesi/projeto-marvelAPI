@@ -6,6 +6,7 @@
   padding: 2rem; /* Espaçamento interno */
   max-width: 95rem; /* Largura máxima do card */
   margin: 2rem auto; /* Centraliza horizontalmente na tela */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra do card */
 }
 
 /* Estilo do bloco da imagem */
@@ -25,13 +26,14 @@
 /* Título dentro do card */
 .info-bloco-texto h1 {
   font-size: 24px; /* Tamanho da fonte do título */
+  color: black;
   margin-bottom: 10px; /* Espaço abaixo do título */
 }
 
 /* Parágrafo dentro do card */
 .info-bloco-texto p {
   font-size: 16px; /* Tamanho da fonte do parágrafo */
-  color: #333; /* Cor do texto */
+  color: #000000; /* Cor do texto */
   line-height: 1.5; /* Espaçamento entre linhas */
 }
 
@@ -41,23 +43,8 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e elevação */
 }
 
-.voltar-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
 
-.botao-voltar {
-  background-color: #e50914;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.botao-voltar:hover {
-  background-color: #b0060f;
+.info-bo{
+  margin-top: 1rem; /* Espaço acima do bloco de texto */
+  margin-left: 97rem; /* Espaço à esquerda do bloco de texto */
 }
