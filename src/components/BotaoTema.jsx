@@ -6,19 +6,18 @@ function TrocaDeCor() { // Declara o componente TrocaDeCor
 )  // Começa no claro
   
   useEffect(() => { // Efeito para atualizar o tema sempre que ele mudar
-      document.body.style.backgroundColor = tema ? "red" : "white" // Altera a cor de fundo do body
+      document.body.style.backgroundColor = tema ? "white" : "red" // Altera a cor de fundo do body
       document.body.style.color = tema ? "white" : "black" // Altera a cor do texto do body
       console.log(`Tema atualizado: ${tema ? "Claro" : "Escuro"}`); // Loga no console qual tema está ativo
       localStorage.setItem("modoEscuro", JSON.stringify(tema)) // Salva o tema no localStorage
   }, [tema]) // Executa o efeito sempre que tema mudar
 
     return (
-         <section className="button"> // Container do botão
-      <div > // Div para o botão
- <button className="botao" onClick={() => setTema(!tema)} > {tema ? "claro" : "escuro"}</button> // Botão que alterna o tema e muda o texto
-  
+        <section className="button"> 
+      <div > 
+ <button className="botao" onClick={() => setTema(!tema)} > {tema ? "claro" : "escuro"}</button> 
         
-      </div> // Fecha a div
+      </div>  div
       </section> // Fecha a section
     );
   }
