@@ -4,6 +4,7 @@
 
 // Estilos
   import './App.css'
+  import Favoritos from './pages/ListaDefavoritos'
 //.
 
 // Páginas
