@@ -1,51 +1,154 @@
 .bodyFavoritos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: auto;
-    min-height: 120vh;
+    min-height: 100vh;
+    background: #ffffff00
+    font-family: 'Lilita One', sans-serif;
 }
+
+
 
 .mainFavoritos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2em;
+    width: 100%;
+}
+
+.mainFavoritos h1 {
+    font-size: 2.6em;
+    color: #e62429;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 8px #fff, 0 2px 8px #e62429;
 }
 
 .infoFavoritos {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
-    justify-content: center; /* Centraliza os itens */
-    gap: 1em; /* Espaçamento entre os itens */
-}
-
-.buttonCarta:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-    cursor: pointer; 
-}
-
-.mainFavoritos h1 {
-    font-size: 2.4em;
-    transition: all 1s ease;
-    font-family: "Lilita One", sans-serif; /* Fonte escolhida */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    margin-bottom: 2em;
 }
 
 .cartaFavoritos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 0.1em solid black;
-    padding: 3em 8em;
-    border-radius: 2em;
-    flex: 0 1 calc(30%); /* Cada carta ocupa 1/3 da largura menos o espaço do gap */
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    border: 2px solid #e62429;
+    background: #fff;
+    padding: 2em 3em;
+    border-radius: 1.5em;
+    box-shadow: 0 4px 16px rgba(230,36,41,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 220px;
+    max-width: 280px;
+    margin-bottom: 1em;
+}
 
+.cartaFavoritos:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(230,36,41,0.18);
+}
+
+.cartaFavoritos img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e62429;
+    margin-bottom: 1em;
+    background: #fff;
+}
+
+.cartaFavoritos h2 {
+    font-size: 1.4em;
+    color: #e62429;
+    margin-bottom: 0.7em;
+    text-align: center;
+}
+
+.buttonCarta {
+    margin-top: 1em;
+    padding: 0.7em 2em;
+    border-radius: 1em;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    background: #e62429;
+    color: #fff;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(230,36,41,0.08);
+}
+
+.buttonCarta:hover {
+    background: #fff;
+    color: #e62429;
+    border: 2px solid #e62429;
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.limparFavoritos {
+    background: #fff;
+    color: #e62429;
+    border: 2px solid #e62429;
+    padding: 0.8em 2.5em;
+    border-radius: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    transition: background 0.3s, color 0.3s;
+}
+
+.limparFavoritos:hover {
+    background: #e62429;
+    color: #fff;
+    cursor: pointer;
+}
+
+.topTresFavoritos {
+    margin-top: 2em;
+    background: #fff7f7;
+    border-radius: 1em;
+    padding: 1.2em 2em;
+    box-shadow: 0 2px 12px rgba(230,36,41,0.07);
+    font-size: 1.2em;
+    color: #e62429;
+    list-style: decimal inside;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #e62429;
+}
+
+.topTresFavoritos li {
+    margin: 0.5em 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.3em 0.7em;
+    border-radius: 0.5em;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.topTresFavoritos li:nth-child(1) {
+    background: #ffe066;
+    color: #bfa100;
+}
+.topTresFavoritos li:nth-child(2) {
+    background: #e9ecef;
+    color: #868e96;
+}
+.topTresFavoritos li:nth-child(3) {
+    background: #ffd6a5;
+    color: #e8590c;
 }
 
 #vermelho {
-    background-color: red;
+    background-color: #e62429;
     color: white;
     padding: 1em;
     border: none;
@@ -54,9 +157,9 @@
 
 #branco {
     background-color: white;
-    color: red;
+    color: #e62429;
     padding: 1em;
-    border: none;
+    border: 2px solid #e62429;
     border-radius: 0.8em;
 }
 

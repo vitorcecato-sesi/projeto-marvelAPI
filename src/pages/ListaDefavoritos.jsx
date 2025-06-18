@@ -1,64 +1,76 @@
 // Hooks
-import { useEffect, useState } from "react"; // Importa hooks do React
-//.
+import React, { useEffect, useState } from "react"; // Importa React e hooks do React
 
 // Style
 import "./styles/listaDefavoritos.css"; // Importa o CSS da página
 import TrocaDecor from "../components/BotaoTema"; // Importa componente de troca de tema
+import Header from "../components/Header"; // Importa o componente Header
 //.
 
-// Componente
-
-//.
-
+// Componente principal da página de favoritos
 function Favoritos() {
-  // Declara o componente Favoritos
+  // Estado para armazenar a lista de favoritos, buscando do localStorage ou iniciando vazio
   const [infoFavorito, setInfoFavorito] = useState(
     JSON.parse(localStorage.getItem("Favoritos")) || []
-  ); // Estado para armazenar favoritos
+  );
 
   useEffect(() => {
-    // Efeito para atualizar favoritos periodicamente
+    // Atualiza a lista de favoritos a cada 100ms para refletir mudanças no localStorage
     const timer = setInterval(() => {
-      // Cria um timer
-      setInfoFavorito(JSON.parse(localStorage.getItem("Favoritos"))); // Atualiza o estado com os favoritos do localStorage
-    }, 100); // Intervalo de 100ms
+      setInfoFavorito(JSON.parse(localStorage.getItem("Favoritos")) || []);
+    }, 100);
 
+    // Limpa o timer quando o componente for desmontado
     return () => {
-      clearInterval(timer); // Remove o timer ao desmontar
+      clearInterval(timer);
     };
-  }, []); // Executa apenas uma vez ao montar
+  }, []);
 
+  // Função para remover um favorito individualmente
   const removerFavorito = (numeroArray) => {
-    // Função para remover favorito
-    alert("Favorito removido!"); // Exibe um alerta ao remover
+    // Filtra o favorito pelo índice e atualiza o localStorage
     const novoFavoritos = infoFavorito.filter(
       (conteudo, index) => index !== numeroArray
-    ); // Filtra o favorito a ser removido
-    return localStorage.setItem("Favoritos", JSON.stringify(novoFavoritos)); // Atualiza o localStorage
+    );
+    return localStorage.setItem("Favoritos", JSON.stringify(novoFavoritos));
   };
+
+  // Função para limpar todos os favoritos
+  const limparFavoritos = () => {
+    localStorage.setItem("Favoritos", JSON.stringify([])); // Limpa o localStorage
+    setInfoFavorito([]); // Limpa o estado local
+    alert("Todos os arquivos confidenciais foram destruidos. Nick fury Agradece!"); // Mostra alerta
+  };
+
+  // Seleciona os três primeiros favoritos para exibir em destaque
+  const topTres = infoFavorito.slice(0, 3);
 
   return (
     <>
       <section className="bodyFavoritos">
-        {" "}
-        {/* Container principal */}
+        {/* Container principal da página */}
         <section className="headerNavFav">
-          {" "}
           {/* Header e navbar */}
           <Header /> {/* Componente Header */}
-          <Navbar favoritos="ativo" /> {/* Componente Navbar com prop */}
         </section>
         <section className="mainFavoritos">
-          {" "}
           {/* Conteúdo principal */}
-          <h1>Favoritos</h1> {/* Título */}
+          <h1>Favoritos</h1> {/* Título da página */}
           {infoFavorito && infoFavorito.length <= 0 && (
             <p>Você não possui favoritos.</p>
-          )}{" "}
+          )}
           {/* Mensagem se não houver favoritos */}
+
+          <button
+            className="limparFavoritos"
+            onClick={limparFavoritos}
+            style={{ margin: "10px 0" }}
+          >
+            Limpar todos os favoritos
+          </button>
+          {/* Botão para limpar todos os favoritos */}
+
           <section className="infoFavoritos">
-            {" "}
             {/* Lista de favoritos */}
             {infoFavorito &&
               infoFavorito.length > 0 &&
@@ -67,17 +79,14 @@ function Favoritos() {
                   personagem,
                   index // Mapeia favoritos na ordem em que foram salvos
                 ) => (
-                  <section className="cartaFavoritos">
-                    {" "}
+                  <section className="cartaFavoritos" key={index}>
                     {/* Card do favorito */}
-                    <span className="rankFavorito">{index + 1}º</span>{" "}
-                    {/* Exibe o número do ranking */}
                     <img
-                      src={personagem.imagem}
-                      alt={`Imagem do ${personagem.thumbnail.path} `}
-                    />{" "}
+                      src={personagem.img} // Imagem do personagem
+                      alt={`Imagem do personagem ${personagem.nome}`} // Texto alternativo
+                    />
                     {/* Imagem do personagem */}
-                    <h2>{personagem.thumbnail.path}</h2>{" "}
+                    <h2>{personagem.nome}</h2>
                     {/* Nome do personagem */}
                     <button
                       id={
@@ -89,12 +98,25 @@ function Favoritos() {
                       onClick={() => removerFavorito(index)}
                     >
                       Desfavoritar
-                    </button>{" "}
+                    </button>
                     {/* Botão para remover favorito */}
                   </section>
                 )
               )}
           </section>
+
+          {/* Lista ordenada dos três primeiros favoritos (embaixo) */}
+          {topTres.length > 0 && (
+            <>
+              <h2 style={{ marginTop: "30px" }}>Top 3 Favoritos</h2>
+              <ol className="topTresFavoritos">
+                {topTres.map((personagem, index) => (
+                  <li key={index}>{personagem.nome}</li>
+                ))}
+              </ol>
+            </>
+          )}
+
           <TrocaDecor /> {/* Componente de troca de tema */}
           <br /> {/* Espaço */}
         </section>
