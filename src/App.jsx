@@ -1,24 +1,13 @@
-// Hooks
-  import { BrowserRouter, Route, Routes } from 'react-router-dom'
-//.
-
-// Estilos
-  import './App.css'
-//.
-
-// Páginas
-  import Home from './pages/Home'
-//.
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import BuscaHome from './components/buscaHome'
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+      <BuscaHome/>
+      
     </>
   )
 }
