@@ -72,3 +72,52 @@
     width: 15vw;
     border-radius: 3em;
 }
+
+
+@media (max-width: 600px) {
+    .blocoFotoGrupo3{
+        width: 70vw;
+        height: 40vh;
+    }
+    .tituloGrupo{
+        width: 40vw;
+    }
+    .fotoDoGrupo{
+        width: 40vw;
+    }
+    .blocoSobreProjeto{
+        width: 70vw;
+    }
+    .tituloSobreProjeto{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .blocoFotoGrupo3{
+        height: 45vh;
+    }
+    .tituloSobreProjeto{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 660px) {
+    .tituloGrupo{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .BlocoLogoEIntegrantes{
+        display: flex;
+        flex-direction: column;
+        gap: 1em
+    }
+    .fotoDoGrupo{
+    
+    }
+    .blocoFotoGrupo3{
+        height: 50vw;
+    }
+}
