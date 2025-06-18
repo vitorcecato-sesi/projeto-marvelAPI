@@ -1,3 +1,4 @@
+
 // Importa o hook useParams do React Router para pegar o ID da URL
 import { useParams } from "react-router-dom";
 
