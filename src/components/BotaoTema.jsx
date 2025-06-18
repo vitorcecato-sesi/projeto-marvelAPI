@@ -15,7 +15,7 @@ function TrocaDeCor() { // Declara o componente TrocaDeCor
     return (
         <section className="button"> // Container do botão
       <div > // Div para o botão
- <button className="botao" onClick={() => setTema(!tema)} > {tema ? "Poke" : "Bola"}</button> // Botão que alterna o tema e muda o texto
+ <button className="botao" onClick={() => setTema(!tema)} > {tema ? "claro" : "escuro"}</button> // Botão que alterna o tema e muda o texto
   
         
       </div> // Fecha a div
