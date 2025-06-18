@@ -1,10 +1,10 @@
 // Hooks
-import React, { useEffect, useState } from "react"; // Importa React e hooks do React
+    import { useEffect, useState } from "react" // Importa hooks do React
+//.
 
 // Style
-import "./styles/listaDefavoritos.css"; // Importa o CSS da página
-import TrocaDecor from "../components/BotaoTema"; // Importa componente de troca de tema
-import Header from "../components/Header"; // Importa o componente Header
+    import "./styles/listaDefavoritos.css" // Importa o CSS da página
+    import TrocaDecor from "../components/BotaoTema" // Importa componente de troca de tema
 //.
 
 // Componente principal da página de favoritos
