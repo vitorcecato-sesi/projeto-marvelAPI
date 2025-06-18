@@ -5,6 +5,7 @@
 // Estilos
   import './App.css'
   import Favoritos from './pages/ListaDefavoritos'
+  
 //.
 
 // Páginas
@@ -18,6 +19,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/favoritos' element={<Favoritos />} />
+          {/* Adicione outras rotas conforme necessário */}
         </Routes>
       </BrowserRouter>
     </>
