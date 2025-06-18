@@ -25,7 +25,7 @@ function BotaoFavorito(props) {
     return () => clearTimeout(timer);
   })
 
-    useEffect(() => {   //  Verifica se o pokemon pesquisado está dentro da array de Favoritos
+    useEffect(() => {   //  Verifica se o personagem pesquisado está dentro da array de Favoritos
         const timer = setInterval(() => {
         const favoritoExistente = infoFavoritos.find(favorito => favorito.nome === informacoes.nome);
         if (favoritoExistente) {
@@ -40,7 +40,7 @@ function BotaoFavorito(props) {
 
     const guardarFavorito = () => {
     if (!favoritar) {
-      const novoFavorito = [...infoFavoritos, informacoes]; // Cria uma nova array com as informações anteriores e o novo pokemon
+      const novoFavorito = [...infoFavoritos, informacoes]; // Cria uma nova array com as informações anteriores e o novo personagem
       localStorage.setItem("Favoritos", JSON.stringify(novoFavorito));  // Armazena a nova array no local storage
       setFavoritar(true);
     }
