@@ -10,11 +10,14 @@ import axios from "axios";
 // Importa o md5 para gerar o hash exigido pela API da Marvel
 import md5 from "md5";
 
-// Importa o componente de cabeçalho
+// Importa o  cabeçalho
 import Header from "../components/Header";
 
 // Importa o botão de troca de tema
 import BotaoTema from "../components/BotaoTema";
+
+//Import o footer
+import Footer from "../components/Footer";
 
 // Importa o arquivo de estilos CSS da página
 import "./styles/Info.css";
@@ -159,6 +162,8 @@ function MaisInfo() {
           )}
         </section>
       </section>
+      <Footer />
+      
     </>
   );
 }
