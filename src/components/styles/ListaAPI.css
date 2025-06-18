@@ -16,8 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 18vw;
-    height: 52vh;
+    width: 25%;
+    height: 50%;
     border: 0.1em solid black;
     padding: 2em;
     gap: 1.5em;
@@ -44,8 +44,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 18vw;
-    height: 52vh;
+    width: 25%;
+    height: 50%;
     border: 0.1em solid black;
     padding: 2em;
     gap: 1.5em;
@@ -62,3 +62,54 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     background-color: #5fecff;
 }
+
+@media only screen and (max-width: 1000px) {
+    .ListaAPI-Cards1 {
+        width: 28vw;
+        height: 58vh;
+        text-align: center;
+    }
+    .ListaAPI-Cards2 {
+        width: 28vw;
+        height: 58vh;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .ListaAPI-Todos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ListaAPI-Cards1 {
+        width: 50vw;
+        height: 58vh;
+        text-align: center;
+    }
+    .ListaAPI-Cards2 {
+        width: 50vw;
+        height: 58vh;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    .ListaAPI-Cards1 {
+        width: 70%;
+        height: 80%;
+        text-align: center;
+    }
+    .ListaAPI-Cards2 {
+        width: 70%;
+        height: 80%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .ListaAPI-Img {
+        width: 80%;
+        height: auto;
+    }
+}
+
