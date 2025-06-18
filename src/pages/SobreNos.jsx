@@ -2,12 +2,22 @@
 import FotoGrupo3 from "../assets/FotoGrupo3.png";
 import LogoG3 from "../assets/logoG3.png";
 
+//Componentes 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 //CSS
 import "../pages/styles/SobreNos.css";
 
 function SobreNos() {
   return (
     <>
+
+    <Header />
+
+    <br/>
+    <br/>
+
       <center>
         <section className="blocoSobrePrincipal">
           <section className="blocoFotoGrupo3">
@@ -43,6 +53,8 @@ function SobreNos() {
           </section>
         </section>
       </center>
+
+      <Footer/>
     </>
   );
 }
