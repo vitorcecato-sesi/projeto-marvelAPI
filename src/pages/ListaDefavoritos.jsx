@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react"; // Importa React e hooks do 
 import "./styles/listaDefavoritos.css"; // Importa o CSS da página
 import TrocaDecor from "../components/BotaoTema"; // Importa componente de troca de tema
 import Header from "../components/Header"; // Importa o componente Header
+import Footer from "../components/Footer";
 //.
 
 // Componente principal da página de favoritos
@@ -120,6 +121,7 @@ function Favoritos() {
           <TrocaDecor /> {/* Componente de troca de tema */}
           <br /> {/* Espaço */}
         </section>
+        <Footer />
       </section>
     </>
   );

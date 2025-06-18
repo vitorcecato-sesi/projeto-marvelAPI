@@ -1,0 +1,17 @@
+.Home-Body {
+    display: flex;
+    flex-direction: column;
+    min-height: 51.7vh;
+    justify-content: space-around;
+}
+.Home-Botao {
+    background-color: red;
+    padding: 1em 2em;
+    border-radius: 2em;
+    transition: 0.3s;
+}
+
+.Home-Botao:hover {
+    background-color: yellow;
+    transform: scale(1.1);
+}
