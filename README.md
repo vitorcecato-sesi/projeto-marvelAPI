@@ -1,5 +1,19 @@
-# Desafio do React + LocalStorage + API Marvel
-**Objetivo:** Criar um site com a API da Marvel, onde podemos buscar os heróis pelo nome e favoritar os mesmos. (As informações devem ser armazenadas no localstorage)
+# React + Vite + Marvel API: Montando Seu App Heróico do Zero!
+
+**Descrição:** Do zero ao “Devenger”: aprenda React JS e domine a API da Marvel criando um app épico — sem precisar de poderes especiais (só café e curiosidade)! ☕
+
+**Objetivo:** Levar o aluno a revisitar e consolidar conceitos essenciais de React, construção de apps modernos com Vite e integração real com APIs públicas, criando um mini-projeto de personagens da Marvel do zero!
+
+**Objetivos Especificos:**
+- Montar e configurar um projeto React moderno com Vite
+- Integrar e consumir dados da Marvel API de forma segura
+- Praticar componentização, uso de props, state e efeitos (useEffect)
+- Criar interface com busca, filtros e roteamento
+- Estilizar componentes de forma prática
+- Salvar dados no LocalStorage (superpoder extra!)
+- Revisar os conceitos mais cobrados em entrevistas e desafios front-end
+
+**Tags:** #ReactJS #Vite #MarvelAPI #Componentização #Revisão
 
 **Professores:**
 - Antonio Tupinamba
