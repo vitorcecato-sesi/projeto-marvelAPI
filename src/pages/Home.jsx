@@ -6,7 +6,11 @@ function Home() {
     return(
         <>
             <button onClick={() => setAperta(!aperta)}>APERTA</button>
-            {aperta && <ListaAPI />}
+            {aperta && 
+            <section style={{display: "flex", flexDirection:"column", alignItems: "center"}}>
+                <ListaAPI />
+            </section>
+            }
         </>
     )
 }
