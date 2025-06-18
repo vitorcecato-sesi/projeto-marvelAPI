@@ -17,11 +17,13 @@ function Home() {
             <BuscaHome />
             <section className="Home-Body">
                 <center>
-                    <br></br>
-                    <br></br>
+                    <br/>
+                    <br/>
                     <TrocaDeCor/>
-                    <br></br>
+                    <br />
                     <button className="Home-Botao" onClick={() => setMostrar(!mostrar)}>{mostrar ? "Ocultar" : "Mostrar"}</button>
+                    <br />
+                    <br />
                     {mostrar && <ListaAPI />}
                 </center>
                 
