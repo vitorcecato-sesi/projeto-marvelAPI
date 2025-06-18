@@ -43,3 +43,18 @@
 .iconesRedesSociais a:hover{
     color: red; /*fundo vermelho quando passa por cima*/
 }
+
+@media (max-width: 900px) {
+    .footerBlocoPrincipal{
+        display: flex;
+        flex-direction: column;
+    }
+    .blocoLinksPaginas{
+        flex-direction: row;
+        gap: 3em;
+        padding: 1em;
+    }
+    .LogoFooterMarvel{
+        width: 8vw;
+    }
+}
