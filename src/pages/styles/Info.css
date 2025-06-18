@@ -50,13 +50,15 @@ body, html {
 /* Nome do herói */
 .info-detalhes-texto h1 {
   margin-bottom: 1rem;  /* Espaço abaixo do título */
-  font-size: 2rem;      /* Tamanho grande para destaque */
+  font-size: 2rem; 
+  color: #f3f3f3;     /* Tamanho grande para destaque */
 }
 
 /* Descrição do herói */
 .info-detalhes-texto p {
   font-size: 1.3rem;    /* Tamanho de fonte aumentado */
-  line-height: 1.6;     /* Espaçamento entre linhas */
+  line-height: 1.6;  
+  color: #f3f3f3;    /* Espaçamento entre linhas */
 }
 
 /* CARD 2 - Lista de HQs */
@@ -71,7 +73,8 @@ body, html {
 
 /* Título da seção de HQs */
 .info-hq-card h2 {
-  margin-bottom: 1rem;  /* Espaço abaixo do título */
+  margin-bottom: 1rem; 
+  color: #f3f3f3;  /* Espaço abaixo do título */
 }
 
 /* Lista de HQs */
@@ -83,7 +86,8 @@ body, html {
 /* Cada item da lista */
 .info-hq-card li {
   margin-bottom: 0.5rem;  /* Espaço entre os itens */
-  font-size: 1rem;        /* Tamanho da fonte padrão */
+  font-size: 1rem;  
+  color: #f3f3f3;       /* Tamanho da fonte padrão */
 }
 
 /* Animação de rotação para o spinner */
