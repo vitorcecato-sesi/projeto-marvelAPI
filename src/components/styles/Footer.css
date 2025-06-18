@@ -1,0 +1,60 @@
+.footerBlocoPrincipal {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    font-family: "Oswald", sans-serif;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.LogoFooterMarvel{
+    width: 5vw;
+}
+
+.blocoLinksPaginas{
+    display: flex;
+    flex-direction: column;
+}
+
+.blocoLinksPaginas a{
+    text-decoration: none;
+    color: #ccc;    
+}
+
+.blocoLinksPaginas a:hover {
+    border-bottom: 2px solid red; /*linha vermelha quando passa por cima*/
+}
+
+.MensagemEngraçada{
+    color: white;
+    font-size: 2.4em;
+}
+
+.iconesRedesSociais a{
+    color: white;
+    font-size: 2em;
+    gap: 10em;
+    text-decoration: none;
+    padding: 1em;
+    transition: all 1s ease; /* Transição suave */
+}
+
+.iconesRedesSociais a:hover{
+    color: red; /*fundo vermelho quando passa por cima*/
+}
+
+@media (max-width: 900px) {
+    .footerBlocoPrincipal{
+        display: flex;
+        flex-direction: column;
+    }
+    .blocoLinksPaginas{
+        flex-direction: row;
+        gap: 3em;
+        padding: 1em;
+    }
+    .LogoFooterMarvel{
+        width: 8vw;
+    }
+}
