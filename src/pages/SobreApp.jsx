@@ -5,6 +5,7 @@ import LogoG3 from "../assets/logoG3.png";
 //Componentes 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import BotaoTema from "../components/BotaoTema"
 
 //CSS
 import "../pages/styles/SobreApp.css";
@@ -12,7 +13,6 @@ import "../pages/styles/SobreApp.css";
 function SobreNos() {
   return (
     <>
-
     <Header />
 
     <br/>
@@ -24,6 +24,8 @@ function SobreNos() {
             <h2 className="tituloGrupo"> GRUPO 3 </h2>
             <img className="fotoDoGrupo" src={FotoGrupo3} alt="Foto Do Grupo" />
           </section>
+
+          <BotaoTema/>
 
           <section className="BlocoLogoEIntegrantes">
             <img className="logoSobreGrupo" src={LogoG3} alt="Logo do Grupo" />

@@ -43,6 +43,10 @@
     gap: 5em;
 }
 
+.BlocoLogoEIntegrantes h3 {
+    color: black
+}
+
 .logoSobreGrupo{
     width: 25vw;
 }
