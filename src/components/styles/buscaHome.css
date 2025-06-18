@@ -47,6 +47,18 @@
     font-size: 1.2em;
 }
 
+.BuscaAPI-select {
+        padding: 0.7em;
+        font-size: 1em;
+        border: 0.1em solid #c4c4c4;
+        border-radius: 0.5em;
+        background-color: #f8f8f8;
+        color: #333;
+        outline: none;
+        cursor: pointer;
+        margin-right: 1em;
+}
+
 .BuscaAPI-BoxCards {
     display: flex;
     flex-direction: row;
