@@ -23,8 +23,7 @@
 }
 
 .blocoLinksPaginas a:hover {
-    color: #fff;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid red; /*linha vermelha quando passa por cima*/
 }
 
 .MensagemEngraçada{
@@ -42,6 +41,5 @@
 }
 
 .iconesRedesSociais a:hover{
-    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
-    color: red;
+    color: red; /*fundo vermelho quando passa por cima*/
 }

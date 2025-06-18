@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importando a instalação do Font Awesome (Para usar os icones)
-//npm install @fortawesome/fontawesome-free
+//É necessario -> npm install @fortawesome/fontawesome-free
 
 //CSS
 import "../components/styles/Footer.css"
@@ -17,8 +17,8 @@ function Footer() {
             <Link to="https://developer.marvel.com/"> <img className="LogoFooterMarvel" src={LogoFooterM} alt="Logo da Marvel" /> </Link>
 
             <section className="blocoLinksPaginas"> 
-                <strong> <Link to="/"> HOME </Link> </strong> {/* strong -> negrito */}
-                <strong> <Link to="/"> FAVORITOS </Link> </strong> 
+                <strong> <Link to="/Home"> HOME </Link> </strong> {/* strong -> negrito */}
+                <strong> <Link to="/Favoritos"> FAVORITOS </Link> </strong> 
                 <strong> <Link to="/SobreApp"> SOBRE O APP </Link>  </strong>
             </section>
 
