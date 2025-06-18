@@ -9,13 +9,13 @@ function Header() {
   return (
     <>
       <section className="HeaderPrincipal">
-        <a href="https://github.com/vitorcecato-sesi/projeto-marvelAPI" target="_blank" rel="noopener noreferrer">
+        <Link to="https://github.com/vitorcecato-sesi/projeto-marvelAPI" target="_blank">
           <i className="fa-brands fa-github"></i> {/* Icone do GitHub */}
-        </a>
+        </Link>
 
-        <a href="https://www.marvel.com/" target="_blank" rel="noopener noreferrer">
+        <Link to="https://www.marvel.com/" target="_blank">
           <img src="../../public/Marvel_Logo.png" alt="Marvel Logo" /> {/* Imagem Logo da Marvel */}
-        </a>
+        </Link>
 
         <h3> Find Your Super Hero</h3>
       </section>
@@ -23,6 +23,7 @@ function Header() {
       <nav className="Navbar">
         <Link to="/Home"> HOME </Link>
         <Link to="/Favoritos"> FAVORITOS </Link>
+        <Link to="/Sobre"> SOBRE O APP </Link>
       </nav>
     </>
   );
