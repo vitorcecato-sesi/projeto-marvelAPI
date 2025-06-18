@@ -17,13 +17,13 @@ function ListaAPI() {
   const [personagens, setPersonagens] = useState([])    // Dados do resultado da API - Personagens
   const [carregando, setCarregando] = useState(true)    // Carregamento da API
 
-  const fraseEfeito = {
+  const fraseEfeito = { // Frases de efeito para os personagens (especificos)
     "Spider-Man": "Vai teia 🕸",
     "Iron Man": "Eu sou o Homem de Ferro!",
     "Captain America": "O Primeiro Vingador!",
   }
 
-  const emojis = {
+  const emojis = {  // Emojis para os personagens (especificos)
     "Spider-Man": "🕷🕸",
     "Iron Man": "🤖💸",
     "Captain America": "🛡"
@@ -61,17 +61,24 @@ function ListaAPI() {
   return (
     <>
         <section className="ListaAPI-Todos">
-        {personagens.map((heroi, index) => (
+
+        {personagens.map((heroi, index) => (    // Map para listar os primeiros 20
+
             <section
-            key={heroi.id}
-            className={`ListaAPI-Cards${index % 2 === 0 ? 1 : 2}`}
+            key={heroi.id}  // Key da section
+            className={`ListaAPI-Cards${index % 2 === 0 ? 1 : 2}`}  // Adiciona o numero da classe para mudar as cores (Ex: ListaAPI-Cards1 ou ListaAPI-Cards2)
             >
             <img
-                src={`${heroi.thumbnail.path}/standard_xlarge.${heroi.thumbnail.extension}`}
-                alt={heroi.name}
-                className="ListaAPI-Img"
+                src={`${heroi.thumbnail.path}/standard_xlarge.${heroi.thumbnail.extension}`}    // Caminho da imagem
+                alt={heroi.name}    // Nome do heroi
+                className="ListaAPI-Img"    // Classe da imagem
             />
+
+            {/* Verifica se é um dos herois especificos. Se tiver, coloca o nome + o emoji, caso contrario só o nome. */}
+            {/* Também, verifica se é par ou impar (fundo vermelho ou amarelo) para adicionar emoji aos cards TOXICOS */}
             <h3>{emojis[heroi.name] ? `${heroi.name} ${emojis[heroi.name]}` : `${heroi.name}`} {index % 2 === 0 ? "" : "☢⚠😫"}</h3>
+            
+            {/* Verifica se o heroi tem uma frase, caso contrario adiciona uma frase padrão */}
             <p>{fraseEfeito[heroi.name] || `${heroi.name} em ação! 🐱‍🏍`}</p>
             </section>
         ))}
