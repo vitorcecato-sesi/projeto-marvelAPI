@@ -9,6 +9,7 @@
 
 // Páginas
   import MaisInfo from './pages/MaisInfo'
+  import Home from './pages/Home'
 //.
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<MaisInfo />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/Detalhes' element={<MaisInfo />} />
         </Routes>
       </BrowserRouter>
     </>

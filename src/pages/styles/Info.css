@@ -40,3 +40,24 @@
   transform: translateY(-2px); /* Leve elevação do card ao passar o mouse */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e elevação */
 }
+
+.voltar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.botao-voltar {
+  background-color: #e50914;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-voltar:hover {
+  background-color: #b0060f;
+}

@@ -13,7 +13,7 @@ function TrocaDeCor() { // Declara o componente TrocaDeCor
   }, [tema]) // Executa o efeito sempre que tema mudar
 
     return (
-        <section className="button"> // Container do botão
+         <section className="button"> // Container do botão
       <div > // Div para o botão
  <button className="botao" onClick={() => setTema(!tema)} > {tema ? "claro" : "escuro"}</button> // Botão que alterna o tema e muda o texto
   
