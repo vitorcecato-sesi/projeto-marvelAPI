@@ -9,6 +9,7 @@
 
 // Páginas
   import Home from './pages/Home'
+  import SobreNos from './pages/SobreNos'
 //.
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/SobreApp' element={<SobreNos />} />
         </Routes>
       </BrowserRouter>
     </>

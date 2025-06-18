@@ -1,0 +1,118 @@
+/* CSS Header (Parte de cima, onde tem a Imagem, o icone do GitHub e o texto) */
+.HeaderPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    background-color: #000000e1;
+    border-bottom: solid rgb(61, 61, 61) 0.5px;
+    padding: 0 2vw; /* O "0" deixa sem espaçamentos em baixo e em cima */
+}
+
+/* Imagem Logo da Marvel */
+.HeaderPrincipal img {
+    position: absolute; 
+    left: 50%; /* Centraliza a imagem horizontalmente */
+    transform: translateX(-50%); /* Centraliza a imagem horizontalmente */
+    height: 7vh;
+    width: auto;
+    top: 0px; /* Ajusta a imagem para ela ficar no topo da tela */
+}
+
+/* Ícone do GitHub */
+.HeaderPrincipal i {
+    margin-left: 10vw; /* afasta o ícone da borda esquerda */
+    color: white;
+    font-size: 1.7em;
+    transition: all 1s ease; /* Transição suave */
+}
+
+/* Hover do Ícone do GitHub */
+.HeaderPrincipal i:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
+    color: red;
+}
+
+/* Texto */
+.HeaderPrincipal h3 {
+    margin-right: 10vw; /* Afasta o texto da borda direita */
+    color: #888;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* CSS Navbar (Navegação) */
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw; /* Espaçamento dos itens */
+    height: 5.5vh;
+    background-color: #000000e1;
+    border-bottom: solid rgb(61, 61, 61) 0.5px; /* Borda apenas em baixo */
+    color: white;
+    font-size: 0.8em;
+    font-weight: 600; /* Deixa a fonte mais grossa, estilo um negrito */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    font-family: "Oswald", sans-serif;
+}
+
+/* Links da Navbar */
+.Navbar a {
+    color: #ccc;
+    text-decoration: none; /* Remove a decoração de Link */
+    border-bottom: 2px solid; /* Para colocar a borda apenas em baixo */
+    transition: color 0.2s, border-bottom 0.2s; /* Deixa as transições mais suaves */
+}
+
+/* Hover dos Links da Navbar */
+.Navbar a:hover {
+    color: #fff;
+    border-bottom: 2px solid red;
+}
+
+/* Links da Navbar quando não estão sendo hover (Não está passando o mouse) */
+.Navbar a:not(:hover) {
+    color: #888;
+    border-bottom: 2px solid transparent; /* Deixa a borda invisível quando não passa o mouse */
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Responsividade - 700px */
+
+@media (max-width: 700px) {
+    .HeaderPrincipal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        height: 15vh;
+    }
+
+    .HeaderPrincipal img {
+        position: static;
+        transform: none;
+        margin: 8px 0;
+        height: 6vh;
+        top: unset;
+    }
+
+    .HeaderPrincipal i {
+        margin-left: 0;
+        font-size: 1.3em;
+        margin-bottom: 6px;
+    }
+
+    .HeaderPrincipal h3 {
+        margin-right: 0;
+        font-size: 0.9em;
+        margin-top: 6px;
+    }
+
+    .Navbar {
+        gap: 2vw;
+        font-size: 0.7em;
+        height: 7vh;
+        padding: 0 2vw;
+    }
+}
