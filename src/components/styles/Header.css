@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.HeaderPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-color: #000000e1;
+    border-bottom: solid rgb(61, 61, 61) 0.5px;
+}
+
+.HeaderPrincipal img {
+    width: auto;
+    height: 7vh;
+    display: block;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    height: 5.5vh;
+    background-color: #000000e1;
+    border-bottom: solid rgb(61, 61, 61) 0.5px;
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Oswald", sans-serif;
+}
+
+.Navbar a {
+    color: #ccc;
+    text-decoration: none;
+    border-bottom: 2px solid; /* Para colocar a borda apenas em baixo */
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.Navbar a:hover {
+    color: #fff;
+    border-bottom: 2px solid red;
+}
+
+.Navbar a:not(:hover) {
+    color: #888;
+    border-bottom: 2px solid transparent;
+}
