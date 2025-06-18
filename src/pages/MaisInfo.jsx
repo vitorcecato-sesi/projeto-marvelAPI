@@ -1,7 +1,12 @@
 import "./styles/Info.css"; // Importando o CSS específico para a página
 
+import Header from "../components/Header";
+import BotaoTema from "../components/BotaoTema";
 function MaisInfo() {
   return (
+    <>  
+    <Header/>
+    <BotaoTema/>
     <div className="info-blocao">
       <div className="info-bloco-img">
         <img
@@ -14,6 +19,7 @@ function MaisInfo() {
         <p>Esta página contém informações adicionais sobre os personagens da Marvel.</p>
       </div>
     </div>
+    </>
   );
 }
 
