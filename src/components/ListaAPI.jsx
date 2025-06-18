@@ -7,6 +7,10 @@
     import './styles/ListaAPI.css'
 //.
 
+// Componentes
+    import BotaoFavorito from "./BotaoFavorito"
+//.
+
 // Keys para a API
     const CHAVE_PUBLICA = "5323f4be36461aa651d45a2c6c8035b0"    // Chave Pública do Usuário
     const CHAVE_PRIVADA = "dfc57c3ddfff308bbadcb36ec69b084480d73c2b"    // Chave Privada do Usuário
@@ -80,6 +84,12 @@ function ListaAPI() {
             
             {/* Verifica se o heroi tem uma frase, caso contrario adiciona uma frase padrão */}
             <p>{fraseEfeito[heroi.name] || `${heroi.name} em ação! 🐱‍🏍`}</p>
+                <BotaoFavorito
+                    nome={emojis[heroi.name] ? `${heroi.name} ${emojis[heroi.name]}` : `${heroi.name}`}
+                    img={`${heroi.thumbnail.path}/standard_xlarge.${heroi.thumbnail.extension}`}
+                    frase={fraseEfeito[heroi.name] || `${heroi.name} em ação! 🐱‍🏍`}
+                    
+                />
             </section>
         ))}
         </section>
