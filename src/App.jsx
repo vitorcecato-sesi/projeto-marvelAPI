@@ -4,14 +4,14 @@
 
 // Estilos
   import './App.css'
-  import Favoritos from './pages/ListaDefavoritos'
 //.
 
 // Páginas
-  import Home from './pages/Home'
+import Home from './pages/Home'
 import ListaPersonagens from "./components/buscaHome";
 import MaisInfo from "./pages/MaisInfo";
-  import SobreApp from './pages/SobreApp'
+import Favoritos from './pages/ListaDefavoritos'
+import SobreApp from './pages/SobreApp'
 //.
 
 function App() {
@@ -20,7 +20,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/SobreApp' element={<SobreApp />} />
+          <Route path='/Favoritos' element={<Favoritos />} />
+          <Route path='/Sobre' element={<SobreApp />} />
+          
         </Routes>
       </BrowserRouter>
     </>

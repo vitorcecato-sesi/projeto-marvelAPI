@@ -21,7 +21,7 @@ function Header() {
       </section>
 
       <nav className="Navbar">
-        <Link to="/Home"> HOME </Link>
+        <Link to="/"> HOME </Link>
         <Link to="/Favoritos"> FAVORITOS </Link>
         <Link to="/Sobre"> SOBRE O APP </Link>
       </nav>
