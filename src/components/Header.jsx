@@ -14,7 +14,7 @@ function Header() {
         </Link>
 
         <Link to="https://www.marvel.com/" target="_blank">
-          <img src="../../public/Marvel_Logo.png" alt="Marvel Logo" /> {/* Imagem Logo da Marvel */}
+          <img src="../assets/Marvel_Logo.png" alt="Marvel Logo" /> {/* Imagem Logo da Marvel */}
         </Link>
 
         <h3> Find Your Super Hero</h3>
