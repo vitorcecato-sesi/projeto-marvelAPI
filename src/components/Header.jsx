@@ -5,6 +5,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Importando a instala√
 
 import "./styles/Header.css";
 
+import LogoMarvel from '../assets/Marvel_Logo.png'
+
 function Header() {
   return (
     <>
@@ -14,7 +16,7 @@ function Header() {
         </Link>
 
         <Link to="https://www.marvel.com/" target="_blank">
-          <img src="../assets/Marvel_Logo.png" alt="Marvel Logo" /> {/* Imagem Logo da Marvel */}
+          <img src={LogoMarvel} alt="Marvel Logo" /> {/* Imagem Logo da Marvel */}
         </Link>
 
         <h3> Find Your Super Hero</h3>
