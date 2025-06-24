@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"; // Importa React e hooks do React
 
 // Style
-import "./styles/listaDefavoritos.css"; // Importa o CSS da página
+import "./styles/ListaDeFavoritos.css"; // Importa o CSS da página
 import TrocaDecor from "../components/BotaoTema"; // Importa componente de troca de tema
 import Header from "../components/Header"; // Importa o componente Header
 import Footer from "../components/Footer";
