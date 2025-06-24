@@ -36,10 +36,10 @@ function MaisInfo() {
   // Hook que executa assim que o componente é montado ou o ID muda
   useEffect(() => {
     // Chave pública fornecida pela API da Marvel
-    const publicKey = "5323f4be36461aa651d45a2c6c8035b0";
+    const publicKey = import.meta.env.VITE_MARVEL_PUBLICA;
 
     // Chave privada usada para gerar o hash
-    const privateKey = "dfc57c3ddfff308bbadcb36ec69b084480d73c2b";
+    const privateKey = import.meta.env.VITE_MARVEL_PRIVADA;
 
     // Timestamp atual, exigido pela autenticação
     const ts = Date.now().toString();

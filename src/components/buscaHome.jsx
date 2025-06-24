@@ -4,8 +4,8 @@ import md5 from "blueimp-md5";
 import { Link } from "react-router-dom";
 
 // Chaves da API da Marvel (⚠️ Evite expor a chave privada em produção)
-const CHAVE_PUBLICA = "5323f4be36461aa651d45a2c6c8035b0";
-const CHAVE_PRIVADA = "dfc57c3ddfff308bbadcb36ec69b084480d73c2b";
+const CHAVE_PUBLICA = import.meta.env.VITE_MARVEL_PUBLICA;
+const CHAVE_PRIVADA = import.meta.env.VITE_MARVEL_PRIVADA;
 
 // Componente principal
 function BuscaHome() {

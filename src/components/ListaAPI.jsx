@@ -12,8 +12,8 @@
 //.
 
 // Keys para a API
-    const CHAVE_PUBLICA = "5323f4be36461aa651d45a2c6c8035b0"    // Chave Pública do Usuário
-    const CHAVE_PRIVADA = "dfc57c3ddfff308bbadcb36ec69b084480d73c2b"    // Chave Privada do Usuário
+  const CHAVE_PUBLICA = import.meta.env.VITE_MARVEL_PUBLICA;    // Chave Pública do Usuário
+  const CHAVE_PRIVADA = import.meta.env.VITE_MARVEL_PRIVADA;    // Chave Privada do Usuário
 //.
 
 function ListaAPI() {
